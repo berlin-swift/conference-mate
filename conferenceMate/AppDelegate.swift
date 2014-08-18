@@ -10,7 +10,9 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate
+
+{
                             
     var window: UIWindow?
 
@@ -18,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
         let navigationController = self.window!.rootViewController as UINavigationController
-        let controller = navigationController.topViewController as MasterViewController
+        let controller = navigationController.topViewController as ListOfConferencesViewController
         controller.managedObjectContext = self.managedObjectContext
         return true
     }
@@ -119,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                 */
                 //println("Unresolved error \(error), \(error.userInfo)")
-                abort()
+//                abort()
             }
         }
         return _persistentStoreCoordinator!

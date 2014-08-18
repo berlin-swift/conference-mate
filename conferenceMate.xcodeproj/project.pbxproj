@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		1114AEC2199E6FCB004BE887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC1199E6FCB004BE887 /* AppDelegate.swift */; };
 		1114AEC5199E6FCB004BE887 /* conferenceMate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC3199E6FCB004BE887 /* conferenceMate.xcdatamodeld */; };
-		1114AEC7199E6FCB004BE887 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC6199E6FCB004BE887 /* MasterViewController.swift */; };
-		1114AEC9199E6FCB004BE887 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC8199E6FCB004BE887 /* DetailViewController.swift */; };
+		1114AEC7199E6FCB004BE887 /* ListOfConferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC6199E6FCB004BE887 /* ListOfConferencesViewController.swift */; };
+		1114AEC9199E6FCB004BE887 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC8199E6FCB004BE887 /* ConferenceViewController.swift */; };
 		1114AECC199E6FCB004BE887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1114AECA199E6FCB004BE887 /* Main.storyboard */; };
 		1114AECE199E6FCB004BE887 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1114AECD199E6FCB004BE887 /* Images.xcassets */; };
 		1114AEDA199E6FCB004BE887 /* conferenceMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AED9199E6FCB004BE887 /* conferenceMateTests.swift */; };
+		1153181A19A01FFB00F4BA9A /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153181919A01FFB00F4BA9A /* EventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		1114AEC0199E6FCB004BE887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1114AEC1199E6FCB004BE887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1114AEC4199E6FCB004BE887 /* conferenceMate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = conferenceMate.xcdatamodel; sourceTree = "<group>"; };
-		1114AEC6199E6FCB004BE887 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		1114AEC8199E6FCB004BE887 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1114AEC6199E6FCB004BE887 /* ListOfConferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfConferencesViewController.swift; sourceTree = "<group>"; };
+		1114AEC8199E6FCB004BE887 /* ConferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
 		1114AECB199E6FCB004BE887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1114AECD199E6FCB004BE887 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1114AED3199E6FCB004BE887 /* conferenceMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = conferenceMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1114AED8199E6FCB004BE887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1114AED9199E6FCB004BE887 /* conferenceMateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conferenceMateTests.swift; sourceTree = "<group>"; };
+		1153181919A01FFB00F4BA9A /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				1114AEC1199E6FCB004BE887 /* AppDelegate.swift */,
-				1114AEC6199E6FCB004BE887 /* MasterViewController.swift */,
-				1114AEC8199E6FCB004BE887 /* DetailViewController.swift */,
+				1114AEC6199E6FCB004BE887 /* ListOfConferencesViewController.swift */,
+				1114AEC8199E6FCB004BE887 /* ConferenceViewController.swift */,
+				1153181919A01FFB00F4BA9A /* EventViewController.swift */,
 				1114AECA199E6FCB004BE887 /* Main.storyboard */,
 				1114AECD199E6FCB004BE887 /* Images.xcassets */,
 				1114AEC3199E6FCB004BE887 /* conferenceMate.xcdatamodeld */,
@@ -214,10 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1153181A19A01FFB00F4BA9A /* EventViewController.swift in Sources */,
 				1114AEC5199E6FCB004BE887 /* conferenceMate.xcdatamodeld in Sources */,
 				1114AEC2199E6FCB004BE887 /* AppDelegate.swift in Sources */,
-				1114AEC7199E6FCB004BE887 /* MasterViewController.swift in Sources */,
-				1114AEC9199E6FCB004BE887 /* DetailViewController.swift in Sources */,
+				1114AEC7199E6FCB004BE887 /* ListOfConferencesViewController.swift in Sources */,
+				1114AEC9199E6FCB004BE887 /* ConferenceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				1114AEDF199E6FCB004BE887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1114AEE0199E6FCB004BE887 /* Build configuration list for PBXNativeTarget "conferenceMateTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				1114AEE2199E6FCB004BE887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
