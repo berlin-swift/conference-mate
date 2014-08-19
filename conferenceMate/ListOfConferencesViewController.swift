@@ -12,9 +12,8 @@ import CoreData
 class ListOfConferencesViewController: UITableViewController
 
 {
-
     var managedObjectContext: NSManagedObjectContext? = nil
-    var conferences: String[] = ["conference1", "conference2", "conference3"];
+    var conferences: [String] = ["conference1", "conference2", "conference3"];
 
     
     func createSomeDataForCoreData()

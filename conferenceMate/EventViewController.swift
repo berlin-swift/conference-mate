@@ -9,15 +9,15 @@
 import UIKit
 import CoreData
 
-class EventViewController: UIViewController
-
+class EventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+    @IBOutlet var eventNameLabel : UILabel!
+    @IBOutlet var eventTimeLabel : UILabel!
+    @IBOutlet var eventPlaceLabel : UILabel!
+    @IBOutlet var descriptionLabel : UILabel!
+    @IBOutlet var participantsTableView : UITableView!
     
-    @IBOutlet var eventNameLabel : UILabel
-    @IBOutlet var eventTimeLabel : UILabel
-    @IBOutlet var eventPlaceLabel : UILabel
-    @IBOutlet var descriptionLabel : UILabel
-    @IBOutlet var participantsTableView : UITableView
+    var participants: [String] = ["participant1", "participant2", "participant3", "participant4"]
     
     var detailItem: AnyObject?
     {
@@ -43,11 +43,6 @@ class EventViewController: UIViewController
         super.viewDidLoad()
         self.configureView()
         eventNameLabel.text = self.detailItem as String
-        
-        
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning()
@@ -55,6 +50,21 @@ class EventViewController: UIViewController
         super.didReceiveMemoryWarning()
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1
+    }
+
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        
+        return participants.count
+    }
     
-    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel.text = participants[indexPath.row]
+        return cell
+    }
+
 }

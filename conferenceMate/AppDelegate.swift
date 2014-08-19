@@ -121,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
                 */
                 //println("Unresolved error \(error), \(error.userInfo)")
-//                abort()
+                abort()
             }
         }
         return _persistentStoreCoordinator!

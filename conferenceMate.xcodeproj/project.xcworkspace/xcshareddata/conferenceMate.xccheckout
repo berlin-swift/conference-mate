@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>099A9D5F-486A-4890-A911-6949B5800C44</string>
+	<key>IDESourceControlProjectName</key>
+	<string>conferenceMate</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F8C728EA544B5D1C8C1B1DFD5A2C9F0E74708463</key>
+		<string>https://github.com/berlin-swift/conference-mate.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>conferenceMate.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F8C728EA544B5D1C8C1B1DFD5A2C9F0E74708463</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/berlin-swift/conference-mate.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F8C728EA544B5D1C8C1B1DFD5A2C9F0E74708463</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F8C728EA544B5D1C8C1B1DFD5A2C9F0E74708463</string>
+			<key>IDESourceControlWCCName</key>
+			<string>conference-mate</string>
+		</dict>
+	</array>
+</dict>
+</plist>

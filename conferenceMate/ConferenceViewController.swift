@@ -12,13 +12,8 @@ import CoreData
 
 
 class ConferenceViewController: UITableViewController
-
 {
-    
-    
-    var events: String[] = ["event1", "event2"]
-
-
+    var events: [String] = ["event1", "event2"]
 
     var detailItem: AnyObject?
     {
