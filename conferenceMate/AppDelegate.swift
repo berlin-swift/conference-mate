@@ -66,18 +66,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     // Returns the managed object context for the application.
     // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
-    var managedObjectContext: NSManagedObjectContext {
-        if !_managedObjectContext {
-            let coordinator = self.persistentStoreCoordinator
-            if coordinator != nil {
-                _managedObjectContext = NSManagedObjectContext()
-                _managedObjectContext!.persistentStoreCoordinator = coordinator
-            }
+    // To avoid the use of iVars here we could mark the stored property as lazy
+    // and assign it a closure with the initialization code
+    // maybe this looks more "swift"-like ;)
+    lazy var managedObjectContext: NSManagedObjectContext? = {
+        let coordinator = self.persistentStoreCoordinator
+        if coordinator != nil {
+            var managedObjectContext = NSManagedObjectContext()
+            managedObjectContext.persistentStoreCoordinator = coordinator
+            return managedObjectContext
+        } else {
+            return nil
         }
-        return _managedObjectContext!
-    }
-    var _managedObjectContext: NSManagedObjectContext? = nil
-
+    }()
+    
     // Returns the managed object model for the application.
     // If the model doesn't already exist, it is created from the application's model.
     var managedObjectModel: NSManagedObjectModel {
