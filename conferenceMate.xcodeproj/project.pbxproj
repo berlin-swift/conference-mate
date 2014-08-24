@@ -13,8 +13,9 @@
 		1114AEC9199E6FCB004BE887 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC8199E6FCB004BE887 /* ConferenceViewController.swift */; };
 		1114AECC199E6FCB004BE887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1114AECA199E6FCB004BE887 /* Main.storyboard */; };
 		1114AECE199E6FCB004BE887 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1114AECD199E6FCB004BE887 /* Images.xcassets */; };
-		1114AEDA199E6FCB004BE887 /* conferenceMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AED9199E6FCB004BE887 /* conferenceMateTests.swift */; };
 		1153181A19A01FFB00F4BA9A /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153181919A01FFB00F4BA9A /* EventViewController.swift */; };
+		4F9108D819AA57F1002CBCA4 /* ConferenceViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9108D719AA57F1002CBCA4 /* ConferenceViewControllerTests.swift */; };
+		4F9108DA19AA581C002CBCA4 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC8199E6FCB004BE887 /* ConferenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,8 @@
 		1114AECD199E6FCB004BE887 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1114AED3199E6FCB004BE887 /* conferenceMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = conferenceMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1114AED8199E6FCB004BE887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1114AED9199E6FCB004BE887 /* conferenceMateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conferenceMateTests.swift; sourceTree = "<group>"; };
 		1153181919A01FFB00F4BA9A /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		4F9108D719AA57F1002CBCA4 /* ConferenceViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +105,7 @@
 		1114AED6199E6FCB004BE887 /* conferenceMateTests */ = {
 			isa = PBXGroup;
 			children = (
-				1114AED9199E6FCB004BE887 /* conferenceMateTests.swift */,
+				4F9108D719AA57F1002CBCA4 /* ConferenceViewControllerTests.swift */,
 				1114AED7199E6FCB004BE887 /* Supporting Files */,
 			);
 			path = conferenceMateTests;
@@ -229,7 +230,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1114AEDA199E6FCB004BE887 /* conferenceMateTests.swift in Sources */,
+				4F9108DA19AA581C002CBCA4 /* ConferenceViewController.swift in Sources */,
+				4F9108D819AA57F1002CBCA4 /* ConferenceViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/conferenceMate.app/conferenceMate";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -370,6 +373,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -378,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/conferenceMate.app/conferenceMate";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
