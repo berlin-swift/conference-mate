@@ -9,9 +9,7 @@
 import UIKit
 import CoreData
 
-
-
-class ConferenceViewController: UITableViewController
+public class ConferenceViewController: UITableViewController
 {
     var events: [String] = ["event1", "event2"]
 
@@ -20,35 +18,35 @@ class ConferenceViewController: UITableViewController
         didSet
         {
             self.configureView()
-        }
-    }
+        }    }
 
-    func configureView()
+    public func configureView()
     {
         
-        self.navigationItem.title = self.detailItem as String
+      self.navigationItem.title = "Conferences"
 
     }
 
-    override func awakeFromNib()
+    public override func awakeFromNib()
     {
         super.awakeFromNib()
     }
     
     
-    override func viewDidLoad()
+    public override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.configureView()
     }
 
-    override func didReceiveMemoryWarning()
+   public override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
 
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "showEvent"
         {
@@ -59,18 +57,18 @@ class ConferenceViewController: UITableViewController
     }
     
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    public override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1
     }
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return events.count
     }
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell
+    public override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel.text = events[indexPath.row]

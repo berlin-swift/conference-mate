@@ -13,31 +13,43 @@ class ConferenceViewControllerTests: XCTestCase {
     
     let conferenceViewController: ConferenceViewController = ConferenceViewController()
     
-    func testConferenceControllerInstantiates()
+    override func setUp()
+    {
+        super.setUp()
+        
+    }
+    
+    override func tearDown() {
+        
+        super.tearDown()
+        
+    }
+    
+    func testControllerInstantiates()
     {
         XCTAssertNotNil(conferenceViewController, "unable to instantiate conferenceViewController")
     }
     
-    func testConferenceControllerViewInstantiates()
+    func testTableViewInstantiates()
     {
         XCTAssertNotNil(conferenceViewController.tableView, "unable to instantiate conferenceViewController's view")
     }
     
-    func testConferenceControllerDataSourceIsConnected()
+    func testTableViewDataSourceIsConnected()
     {
         XCTAssertNotNil(conferenceViewController.tableView.dataSource, "conference controller's datasource not connected")
     }
     
-    func testConferenceControllerDelegateIsConnected()
+    func testTableViewDelegateIsConnected()
     {
         XCTAssertNotNil(conferenceViewController.tableView.delegate, "conference controller's delegate not connected")
     }
     
-    func testConferenceControllerReturnsNumberOfSections() {
+    func testTableViewReturnsNumberOfRowsInSections() {
         
         var expected = conferenceViewController.events.count;
         
-        XCTAssertEqual(expected, conferenceViewController.tableView(conferenceViewController.tableView, numberOfRowsInSection:1));
+        XCTAssertEqual(expected, conferenceViewController.tableView(conferenceViewController.tableView, numberOfRowsInSection:0))
         
     }
     

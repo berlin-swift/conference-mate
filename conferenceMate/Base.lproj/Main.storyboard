@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="55" y="-201"/>
         </scene>
-        <!--Conference View Controller-->
+        <!--Conferences-->
         <scene sceneID="kcn-B4-ekP">
             <objects>
-                <tableViewController id="Iy0-9w-uUF" customClass="ConferenceViewController" customModule="conferenceMate" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Conferences" id="Iy0-9w-uUF" customClass="ConferenceViewController" customModule="conferenceMate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QTu-xy-Ufw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="489" y="-201"/>
         </scene>
-        <!--Event View Controller-->
+        <!--Events-->
         <scene sceneID="ekf-1o-E7h">
             <objects>
-                <viewController id="M6t-iG-7qc" customClass="EventViewController" customModule="conferenceMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Events" id="M6t-iG-7qc" customClass="EventViewController" customModule="conferenceMate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NHU-1Z-UYU"/>
                         <viewControllerLayoutGuide type="bottom" id="BOU-oZ-zy7"/>

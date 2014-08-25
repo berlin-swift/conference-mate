@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class EventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+public class EventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     @IBOutlet var eventNameLabel : UILabel!
     @IBOutlet var eventTimeLabel : UILabel!
@@ -27,40 +27,39 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    func configureView()
+    public func configureView()
     {
-        self.navigationItem.title = self.detailItem as String
+        self.navigationItem.title = "Events"
     }
     
-    override func awakeFromNib()
+    public override func awakeFromNib()
     {
         super.awakeFromNib()
     }
     
     
-    override func viewDidLoad()
+    public override func viewDidLoad()
     {
         super.viewDidLoad()
         self.configureView()
-        eventNameLabel.text = self.detailItem as String
     }
     
-    override func didReceiveMemoryWarning()
+    public override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    public func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1
     }
 
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         
         return participants.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    public func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel.text = participants[indexPath.row]

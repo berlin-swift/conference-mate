@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ListOfConferencesViewController: UITableViewController
+public class ListOfConferencesViewController: UITableViewController
 
 {
     var managedObjectContext: NSManagedObjectContext? = nil
@@ -22,26 +22,26 @@ class ListOfConferencesViewController: UITableViewController
         //here is the place for syncing core data with data from server
     }
 
-    override func awakeFromNib()
+    override public func awakeFromNib()
     {
         super.awakeFromNib()
     }
 
-    override func viewDidLoad()
+    override public func viewDidLoad()
     {
         super.viewDidLoad()
         self.createSomeDataForCoreData()
         self.navigationItem.title = "Conferences"
     }
 
-    override func didReceiveMemoryWarning()
+    override public func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
 
     // #pragma mark - Segues
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "showConference"
         {
@@ -53,17 +53,17 @@ class ListOfConferencesViewController: UITableViewController
 
     // #pragma mark - Table View
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1;
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return conferences.count;
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel.text = conferences[indexPath.row]
