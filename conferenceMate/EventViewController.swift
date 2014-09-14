@@ -29,10 +29,10 @@ public class EventViewController: UIViewController, UITableViewDelegate, UITable
     
     public func configureView()
     {
-        self.navigationItem.title = "Events"
+        self.navigationItem.title = "Event"
     }
     
-    public override func awakeFromNib()
+    public  override func awakeFromNib()
     {
         super.awakeFromNib()
     }
@@ -49,6 +49,16 @@ public class EventViewController: UIViewController, UITableViewDelegate, UITable
         super.didReceiveMemoryWarning()
     }
     
+    public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "showParticipant"
+        {
+            let indexPath = self.participantsTableView.indexPathForSelectedRow()
+            let object = participants[indexPath.row]
+            (segue.destinationViewController as ParticipantViewController).detailItem = object
+        }
+    }
+    
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1
@@ -59,8 +69,8 @@ public class EventViewController: UIViewController, UITableViewDelegate, UITable
         return participants.count
     }
     
-    public func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        
+    public func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel.text = participants[indexPath.row]
         return cell

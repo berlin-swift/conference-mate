@@ -26,9 +26,14 @@ class EventViewControllerTests: XCTestCase {
         XCTAssertNotNil(eventViewController, "unable to instantiate eventViewController")
     }
     
-    func testTableViewInstantiates()
+    func testViewInstantiates()
     {
         XCTAssertNotNil(eventViewController.view, "unable to instantiate event controller's view")
     }
-
+    
+    func testViewInstantiatesSubviews()
+    {
+        XCTAssertNotNil(eventViewController.view.subviews,"unable to instantiate subviews")
+    }
+    
 }

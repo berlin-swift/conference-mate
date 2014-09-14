@@ -18,12 +18,13 @@ public class ConferenceViewController: UITableViewController
         didSet
         {
             self.configureView()
-        }    }
+        }
+    }
 
     public func configureView()
     {
         
-      self.navigationItem.title = "Conferences"
+      self.navigationItem.title = "Conference"
 
     }
 
