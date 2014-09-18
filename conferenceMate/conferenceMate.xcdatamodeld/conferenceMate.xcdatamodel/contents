@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.12" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Conference" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.14" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Conference" representedClassName="Conference" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="consistOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="partOf" inverseEntity="Event" syncable="YES"/>
+        <relationship name="hasEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="partOfEvent" inverseEntity="Event" syncable="YES"/>
+        <relationship name="hasParticipants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participant" inverseName="attendConferences" inverseEntity="Participant" syncable="YES"/>
     </entity>
-    <entity name="Event">
+    <entity name="Event" representedClassName="Event">
         <attribute name="conferenceId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,11 +14,26 @@
         <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speaker" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="partOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Conference" inverseName="consistOf" inverseEntity="Conference" syncable="YES"/>
+        <relationship name="hasParticipants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participant" inverseName="attendEvents" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="partOfEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Conference" inverseName="hasEvents" inverseEntity="Conference" syncable="YES"/>
         <userInfo/>
     </entity>
+    <entity name="Participant" representedClassName="Participant" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="conferenceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="middleName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="attendConferences" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Conference" inverseName="hasParticipants" inverseEntity="Conference" syncable="YES"/>
+        <relationship name="attendEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="hasParticipants" inverseEntity="Event" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Event" positionX="-954" positionY="0" width="128" height="163"/>
-        <element name="Conference" positionX="-1179" positionY="0" width="128" height="88"/>
+        <element name="Conference" positionX="-1386" positionY="2" width="128" height="103"/>
+        <element name="Event" positionX="-1215" positionY="-160" width="128" height="178"/>
+        <element name="Participant" positionX="-1136" positionY="108" width="128" height="208"/>
     </elements>
 </model>
