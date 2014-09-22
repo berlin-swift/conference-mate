@@ -13,6 +13,9 @@
 		1114AEC9199E6FCB004BE887 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC8199E6FCB004BE887 /* ConferenceViewController.swift */; };
 		1114AECC199E6FCB004BE887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1114AECA199E6FCB004BE887 /* Main.storyboard */; };
 		1114AECE199E6FCB004BE887 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1114AECD199E6FCB004BE887 /* Images.xcassets */; };
+		4F1C630919D0A1F300F1B088 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1C630819D0A1F300F1B088 /* Participant.swift */; };
+		4F1C630B19D0A1F300F1B088 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1C630A19D0A1F300F1B088 /* Event.swift */; };
+		4F1C630D19D0A1F300F1B088 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1C630C19D0A1F300F1B088 /* Conference.swift */; };
 		4F1C7F3C19ABD288003A9111 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153181919A01FFB00F4BA9A /* EventViewController.swift */; };
 		4F1C7F3D19ABD2D5003A9111 /* ListOfConferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC6199E6FCB004BE887 /* ListOfConferencesViewController.swift */; };
 		4F1C7F3E19ABD2D9003A9111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC1199E6FCB004BE887 /* AppDelegate.swift */; };
@@ -24,9 +27,6 @@
 		4F9108D819AA57F1002CBCA4 /* ConferenceViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9108D719AA57F1002CBCA4 /* ConferenceViewControllerTests.swift */; };
 		4F9108DA19AA581C002CBCA4 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114AEC8199E6FCB004BE887 /* ConferenceViewController.swift */; };
 		4F94E7D419C61CB70029EF76 /* ParticipantViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94E7D319C61CB70029EF76 /* ParticipantViewControllerTests.swift */; };
-		4FEAF63C19CB5DCD004A271F /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAF63B19CB5DCD004A271F /* Conference.swift */; };
-		4FEAF63E19CB5DCD004A271F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAF63D19CB5DCD004A271F /* Event.swift */; };
-		4FEAF64019CB5DCE004A271F /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAF63F19CB5DCE004A271F /* Participant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,14 +51,14 @@
 		1114AED3199E6FCB004BE887 /* conferenceMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = conferenceMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1114AED8199E6FCB004BE887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1153181919A01FFB00F4BA9A /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		4F1C630819D0A1F300F1B088 /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		4F1C630A19D0A1F300F1B088 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4F1C630C19D0A1F300F1B088 /* Conference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
 		4F1C7F4519ABD3C0003A9111 /* EventViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewControllerTests.swift; sourceTree = "<group>"; };
 		4F1C7F4B19ABD6F6003A9111 /* ListOfConferencesViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfConferencesViewControllerTests.swift; sourceTree = "<group>"; };
 		4F3FAFFC19C22BE400C7F22E /* ParticipantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantViewController.swift; sourceTree = "<group>"; };
 		4F9108D719AA57F1002CBCA4 /* ConferenceViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewControllerTests.swift; sourceTree = "<group>"; };
 		4F94E7D319C61CB70029EF76 /* ParticipantViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticipantViewControllerTests.swift; path = ../ParticipantViewControllerTests.swift; sourceTree = "<group>"; };
-		4FEAF63B19CB5DCD004A271F /* Conference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conference.swift; path = ../Conference.swift; sourceTree = "<group>"; };
-		4FEAF63D19CB5DCD004A271F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../Event.swift; sourceTree = "<group>"; };
-		4FEAF63F19CB5DCE004A271F /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Participant.swift; path = ../Participant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,9 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				1114AEC3199E6FCB004BE887 /* conferenceMate.xcdatamodeld */,
-				4FEAF63F19CB5DCE004A271F /* Participant.swift */,
-				4FEAF63D19CB5DCD004A271F /* Event.swift */,
-				4FEAF63B19CB5DCD004A271F /* Conference.swift */,
+				4F1C630C19D0A1F300F1B088 /* Conference.swift */,
+				4F1C630A19D0A1F300F1B088 /* Event.swift */,
+				4F1C630819D0A1F300F1B088 /* Participant.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -267,12 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FEAF63E19CB5DCD004A271F /* Event.swift in Sources */,
+				4F1C630D19D0A1F300F1B088 /* Conference.swift in Sources */,
+				4F1C630B19D0A1F300F1B088 /* Event.swift in Sources */,
 				4F1C7F4A19ABD5F8003A9111 /* EventViewController.swift in Sources */,
-				4FEAF64019CB5DCE004A271F /* Participant.swift in Sources */,
 				1114AEC5199E6FCB004BE887 /* conferenceMate.xcdatamodeld in Sources */,
 				4F3FAFFD19C22BE400C7F22E /* ParticipantViewController.swift in Sources */,
-				4FEAF63C19CB5DCD004A271F /* Conference.swift in Sources */,
+				4F1C630919D0A1F300F1B088 /* Participant.swift in Sources */,
 				1114AEC2199E6FCB004BE887 /* AppDelegate.swift in Sources */,
 				1114AEC7199E6FCB004BE887 /* ListOfConferencesViewController.swift in Sources */,
 				1114AEC9199E6FCB004BE887 /* ConferenceViewController.swift in Sources */,
